@@ -15,9 +15,34 @@ def greedySearch():
     List = inputStats()
     from operator import itemgetter
     List = sorted(List, key=itemgetter(2), reverse = True)
+    ListIndex = List
+    tempList = []
+    total = 0
+    #apply dfs on the list to perform greedy search
+    while ListIndex:
+        pointer = ListIndex.pop()
+        pointerValue = pointer[1]  
+        while List:
+            length = len(List)
+            count = 0
+            nextP = (List.pop())
+            nextPvalue = nextP[1]
+            #swapping if we are not dealing with the same initial value
+            if count == 0 and (pointerValue != nextPvalue):
+                for i in List:
+                    token = 0
+                    if i == pointer:
+                        List[i],List[length-1] = List[length-1],List[i]
+            print("the swapped list : ",List)
+            total = nextPvalue + total
+            if total > 100:
+                continue
+            else :
+                tempList.append(nextP) 
+            print("total: ",total)
+            count = count + 1
+            print("list : ", nextP)
     return List
-
-
 
 def main():
     x = greedySearch()
