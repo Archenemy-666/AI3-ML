@@ -40,12 +40,17 @@ def optimalSearch(binary_strings,List,ListSize,size):
                     total = total - tempVal[1]
                     print("list and total",tempOfList,total)
                 
-                bestList.append(tempOfList)          
             else:
                 continue
             print("\n")
+            if tempOfList not in bestList:
+                bestList.append(tempOfList)
+            else:
+                continue
     print("--------------")
     print("\n")
+    print("bestList: ", bestList)
+
 def main():
     List, size = inputStats()    
     binary_strings,ListSize = generate_binary_strings(size)
