@@ -41,7 +41,7 @@ def greedySearch():
                 tempList.append(nextP) 
             print("total: ",total)
             count = count + 1
-            print("list : ", nextP)
+
     return List
 
 def main():

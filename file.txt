@@ -1,0 +1,74 @@
+Note: you will find code for greedy search, genetic algorithms, decision tree learners nearest neighbors and  naive Bayes and other learners in the textbook code  at the website for the AIMA, https://github.com/aimacodeLinks to an external site.
+
+The preferred programming language is Python.  (If you wish to  use another nonproprietary programming language, e.g. C++, Java, or Julia,  it is okay.
+
+Genetic Algorithms for Optimization
+The goal of this exercise is to compare the results of a simple greedy algorithm with the results of a Genetic Algorithm for an optimization problem.
+
+The specific exercise is to find the best allocation of  $100 Million dollars for Covid 19 vaccines to reach the most people given the fixed budget. For the purposes of illustration, we will count complete doses (so 2 dose regimens are treated as 1.)  You will solve it for the scenario below. These are all fake numbers. For real information, see: https://www.marketwatch.com/story/there-are-seven-coronavirus-vaccine-candidates-being-tested-in-the-us-heres-where-they-stand-2020-09-08Links to an external site.
+
+ 
+
+ 
+
+Vaccine
+
+Cost in $Millions’s
+
+Total vaccinated (M)
+
+1.     Pfizer-BioNTech
+
+20
+
+6
+
+2.     AstraZeneca
+
+60
+
+8
+
+3.     Janssen
+
+30
+
+5
+
+4.     Moderna
+
+90
+
+7
+
+5.     Inovio
+
+40
+
+3
+
+6.     Johnson&Johnson
+
+70
+
+9
+
+7.     Novavax
+
+50
+
+6
+
+ 
+
+Treat this as a binary problem where for each of these marketing campaigns you either select it, or you don’t. Hint: you can represent the choices as a string:   e,g, “1010000”
+
+The final output should be a list of the items selected (you can use the item number), the cost and the expected doses. For example
+
+Vaccines: [1, 3] Cost: 50M  Total vaccinated: 11 M
+
+(ie. buy Item 1 and Item 3 for 3.5M to reach 1.2M people
+
+Implement both a greedy search and a search using Genetic Algorithm (GA).
+
+Note: For greedy stop when the total spent cannot be increased without exceeding the budget.  For GA, “fitness” for  a model will be the sum of the expected reach (as long as it does not exceed the max).  Use maximum of 100 for maximum of generation and population sizes.
